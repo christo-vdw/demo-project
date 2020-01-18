@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS records;
+ 
+CREATE TABLE records (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  val VARCHAR(250) NOT NULL,
+);
+ 
+-- INSERT INTO records (val) VALUES ('Test Data');
