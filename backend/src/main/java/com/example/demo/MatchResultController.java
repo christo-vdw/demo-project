@@ -48,8 +48,6 @@ public class MatchResultController {
 	@ApiOperation(value = "Add a match result")
 	@PostMapping("/match_results")
 	public MatchResult createMatch(@Valid @RequestBody MatchResult record) {
-		
-		System.out.println("ADDING");
 		return matchResultRepository.save(record);
 	}
 
