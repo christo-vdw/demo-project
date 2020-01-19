@@ -21,7 +21,7 @@ public class SwaggerConfig {
 	}
 
 	private ApiInfo apiEndPointsInfo() {
-		return new ApiInfoBuilder().title("Matches REST API")
+		return new ApiInfoBuilder().title("Match Result REST API")
 				.license("Apache 2.0").licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html").version("1.0.0")
 				.build();
 	}

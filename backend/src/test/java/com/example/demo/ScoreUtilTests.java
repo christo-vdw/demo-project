@@ -12,7 +12,7 @@ public class ScoreUtilTests {
 	@Test
 	public void TestScoreCalculationSimple() {
 
-		Match[] matches = new Match[] { new Match("A", 2, "B", 0), };
+		MatchResult[] matches = new MatchResult[] { new MatchResult("A", 2, "B", 0), };
 
 		List<TeamScore> result = ScoreUtils.calculateScores(Arrays.asList(matches));
 		result.stream().forEach(r -> System.out.println(r.toString()));
@@ -26,19 +26,19 @@ public class ScoreUtilTests {
 	@Test
 	public void TestScoreCalculation() {
 		
-		Match[] matches = new Match[]{
-				new Match("Manchester United", 2, "Chelsea", 0),
-				new Match("Manchester United", 1, "LIverpool", 1), 
-				new Match("Manchester United", 0, "Arsenal", 2),
-				new Match("Chelsea", 3, "Manchester United", 1),
-				new Match("Liverpool", 0, "Manchester United", 1),
-				new Match("Arsenal", 2, "Manchester United", 2),
-				new Match("Chelsea", 2, "Liverpool", 3),
-				new Match("Chelsea", 0, "Arsenal", 0),
-				new Match("Liverpool", 0, "Chelsea", 1),
-				new Match("Arsenal", 5, "Chelsea", 1),
-				new Match("Liverpool", 2, "Arsenal", 1),
-				new Match("Arsenal", 3, "Liverpool", 0)
+		MatchResult[] matches = new MatchResult[]{
+				new MatchResult("Manchester United", 2, "Chelsea", 0),
+				new MatchResult("Manchester United", 1, "LIverpool", 1), 
+				new MatchResult("Manchester United", 0, "Arsenal", 2),
+				new MatchResult("Chelsea", 3, "Manchester United", 1),
+				new MatchResult("Liverpool", 0, "Manchester United", 1),
+				new MatchResult("Arsenal", 2, "Manchester United", 2),
+				new MatchResult("Chelsea", 2, "Liverpool", 3),
+				new MatchResult("Chelsea", 0, "Arsenal", 0),
+				new MatchResult("Liverpool", 0, "Chelsea", 1),
+				new MatchResult("Arsenal", 5, "Chelsea", 1),
+				new MatchResult("Liverpool", 2, "Arsenal", 1),
+				new MatchResult("Arsenal", 3, "Liverpool", 0)
 		};
 		
 		List<TeamScore> result = ScoreUtils.calculateScores(Arrays.asList(matches));
@@ -55,8 +55,8 @@ public class ScoreUtilTests {
 	@Test
 	public void TestScoreCalculationTied() {
 
-		Match[] matches = new Match[] { new Match("A", 2, "B", 0), new Match("B", 2, "C", 0),
-				new Match("C", 2, "A", 0) };
+		MatchResult[] matches = new MatchResult[] { new MatchResult("A", 2, "B", 0), new MatchResult("B", 2, "C", 0),
+				new MatchResult("C", 2, "A", 0) };
 
 		List<TeamScore> result = ScoreUtils.calculateScores(Arrays.asList(matches));
 
@@ -70,7 +70,7 @@ public class ScoreUtilTests {
 	@Test
 	public void TestScoreCalculationEmpty() {
 
-		Match[] matches = new Match[] {};
+		MatchResult[] matches = new MatchResult[] {};
 
 		List<TeamScore> result = ScoreUtils.calculateScores(Arrays.asList(matches));
 		result.stream().forEach(r -> System.out.println(r.toString()));

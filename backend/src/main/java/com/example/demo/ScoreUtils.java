@@ -14,7 +14,7 @@ public class ScoreUtils {
 
 	// TODO CVDW - Remove logic duplication
 
-	public static void accumulateScore(Map<String, Score> scores, Match matchResult) {
+	public static void accumulateScore(Map<String, Score> scores, MatchResult matchResult) {
 
 		String teamAName = matchResult.getTeamA().toUpperCase();
 		String teamBName = matchResult.getTeamB().toUpperCase();
@@ -46,7 +46,7 @@ public class ScoreUtils {
 
 	}
 
-	public static List<TeamScore> calculateScores(Iterable<Match> matchResults) {
+	public static List<TeamScore> calculateScores(Iterable<MatchResult> matchResults) {
 
 		Map<String, Score> teamScores = new HashMap<String, Score>();
 
@@ -60,7 +60,7 @@ public class ScoreUtils {
 	}
 
 	// TODO CVDW - Not used
-	private List<String> getUniqueTeamNames(List<Match> matchResults) {
+	private List<String> getUniqueTeamNames(List<MatchResult> matchResults) {
 		return matchResults.stream().flatMap(r -> Arrays.stream(new String[] { r.getTeamA(), r.getTeamB() })).distinct()
 				.collect(Collectors.toList());
 	}

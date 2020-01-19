@@ -8,11 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "matches")
+@Table(name = "match_results")
 //TODO CVDW - Rename to match_result
-public class Match {
+public class MatchResult {
 	private long id;
-	private String val;
 	
 	private String teamA;
 	private String teamB;
@@ -20,7 +19,10 @@ public class Match {
 	private Integer teamAGoals;
 	private Integer teamBGoals;
 	
-	public Match(String teamA, Integer teamAGoals, String teamB, Integer teamBGoals) {
+	public MatchResult() {
+	}
+	
+	public MatchResult(String teamA, Integer teamAGoals, String teamB, Integer teamBGoals) {
 		
 		this.teamA = teamA;
 		this.teamB = teamB;
@@ -38,15 +40,6 @@ public class Match {
 		this.id = id;
 	}
 
-	@Column(name = "val", nullable = false)
-	public String getVal() {
-		return val;
-	}
-
-	public void setVal(String value) {
-		this.val = value;
-	}
-	
 	@Column(name = "team_a", nullable = false)
 	public String getTeamA() {
 		return teamA;
