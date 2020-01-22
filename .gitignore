@@ -31,3 +31,6 @@ build/
 
 ###Maven
 .mvn/
+
+###Packaged frontend
+/backend/src/main/resources/public/
