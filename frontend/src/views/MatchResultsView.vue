@@ -7,7 +7,7 @@
 import MatchResults from "@/components/MatchResults.vue";
 
 export default {
-  name: "home",
+  name: "MatchResultsView",
   components: {
     MatchResults
   }

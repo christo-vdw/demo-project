@@ -7,7 +7,8 @@ Vue.use(Vuex);
 const api = new Vapi({
   baseURL: "http://localhost:8080/api/v1",
   state: {
-    matchResults: []
+    matchResults: [],
+    teamScores: []
   }
 })
   .delete({
@@ -19,6 +20,11 @@ const api = new Vapi({
     action: "fetchMatchResults",
     property: "matchResults",
     path: "/match_results"
+  })
+  .get({
+    action: "fetchTeamScores",
+    property: "teamScores",
+    path: "/league_table"
   })
   .getStore();
 
