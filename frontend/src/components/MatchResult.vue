@@ -1,8 +1,15 @@
 <template>
-  <div>
-    {{ matchResult }}
-    <a @click="remove" href="#">delete</a>
-  </div>
+  <v-hover v-slot:default="{ hover }">
+    <tr>
+      <td>{{ matchResult.teamA }} vs {{ matchResult.teamB }}</td>
+      <td>{{ matchResult.teamAGoals }} - {{ matchResult.teamBGoals }}</td>
+      <td>
+        <v-btn fab small outlined :color="hover ? '#C00000FF' : '#00000000'">
+          X
+        </v-btn>
+      </td>
+    </tr>
+  </v-hover>
 </template>
 
 <script lang="ts">

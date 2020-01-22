@@ -1,6 +1,19 @@
 <template>
   <div>
-    <MatchResult :matchResult="r" v-for="r in matchResults" :key="r.id" />
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-left">Match</th>
+            <th class="text-left">Goals</th>
+            <th class="text-left"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <MatchResult :matchResult="r" v-for="r in matchResults" :key="r.id" />
+        </tbody>
+      </template>
+    </v-simple-table>
   </div>
 </template>
 
