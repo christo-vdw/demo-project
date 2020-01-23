@@ -4,7 +4,13 @@
       <td>{{ matchResult.teamA }} vs {{ matchResult.teamB }}</td>
       <td>{{ matchResult.teamAGoals }} - {{ matchResult.teamBGoals }}</td>
       <td>
-        <v-btn fab small outlined :color="hover ? '#C00000FF' : '#00000000'">
+        <v-btn
+          @click="remove"
+          fab
+          small
+          outlined
+          :color="hover ? '#C00000FF' : '#00000000'"
+        >
           X
         </v-btn>
       </td>
@@ -22,6 +28,7 @@ export default class MatchResult extends Vue {
   @Prop() private matchResult!: IMatchResult;
   remove() {
     // this.$emit("remove", this.matchResult.id);
+    alert("Not implemented");
     //TODO
   }
 }

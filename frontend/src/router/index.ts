@@ -6,11 +6,6 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "home",
-    component: Home
-  },
-  {
     path: "/match_results",
     name: "Match Results",
     // route level code-splitting

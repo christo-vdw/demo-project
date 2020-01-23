@@ -15,3 +15,5 @@ new Vue({
   vuetify: new Vuetify(),
   render: h => h(App)
 }).$mount("#app");
+
+router.push("match_results");
