@@ -34,3 +34,9 @@ build/
 
 ###Packaged frontend
 /backend/src/main/resources/public/
+
+###Test Reports
+/frontend/tests/e2e/reports
+
+### Logs
+*.log

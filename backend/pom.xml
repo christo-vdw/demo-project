@@ -15,9 +15,14 @@
 	<description>Demo project for Spring Boot backend</description>
 	<packaging>jar</packaging>
 
+	<!-- TODO - remove hardcoded dependency versions -->
 	<dependencies>
 
-		<!-- TODO - remove hardcoded dependency versions -->
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>frontend</artifactId>
+			<version>${version}</version>
+		</dependency>
 
 		<!-- SPRING -->
 
@@ -151,6 +156,58 @@
 			</plugin>
 
 
+			<!-- START SERVER BEFORE RUNNING E2E -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+
+				<executions>
+					<execution>
+						<id>pre integration test</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>start</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>post integration test</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<workingDirectory>${basedir}</workingDirectory>
+					<mainClass>com.example.demo.DemoApplication</mainClass>
+				</configuration>
+			</plugin>
+
+			<!-- RUN E2E -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>front-end e2e test</id>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<phase>integration-test</phase>
+						<configuration>
+							<executable>npm</executable>
+							<arguments>
+								<argument>run</argument>
+								<argument>test:e2e</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<workingDirectory>${project.basedir}/../frontend</workingDirectory>
+				</configuration>
+			</plugin>
 
 		</plugins>
 	</build>

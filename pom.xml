@@ -12,7 +12,6 @@
 	<name>demo-webapp</name>
 	<description>Demo project for Spring Boot and Vue Web application</description>
 
-
 	<properties>
 		<version>0.0.1-SNAPSHOT</version>
 		<spring-boot.version>2.1.8.RELEASE</spring-boot.version>
