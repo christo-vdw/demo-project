@@ -17,6 +17,8 @@ Vue
 npm
 ts
 Vuex
+Vuetify
+Nightwatch
 
 ### Backend
 
@@ -24,13 +26,7 @@ Swagger
 Spring Boot
 JPA
 Maven
-javax persistance
 H2
-
-Axios?
-vuetify
-docker?
-mongo db?
 
 ## Building
 
@@ -38,18 +34,15 @@ The build is configured using Maven.
 
 Maven is utilised to build the backend and invokes npm build and package the frontend.
 
+Nightwatch is used for E2E testing.
+
 To run the build with the tests included:
 
 `mvn clean install`
 
-Running tests only:
+Running the built app:
 
-TODO
-`mvn surefire`
-
-Running the app server:
-
-`java -jar ./target/backend-0.0.1-SNAPSHOT.jar`
+`java -jar ./backend/target/backend-0.0.1-SNAPSHOT.jar`
 
 and navigate to:
 
@@ -70,3 +63,14 @@ While the application is running the API documention as well as the in memory DB
     - JDBC URL: 'jdbc:h2:mem:testdb'
     - User Name: 'sa'
     - Password: 'password'
+
+## TODO
+
+- Implement CRUD operations on the frontend.
+- Expand testing.
+- Add surefire and ensure that backend unit tests are running with build.
+- Add Licence
+  
+## Bugs & Issues
+
+- If the E2E testing fails the server is not killed properly and subsequent builds can't run the test again. To get around this the process has to be killed manually.
