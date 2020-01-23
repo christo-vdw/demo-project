@@ -7,6 +7,11 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+import com.example.demo.model.MatchResult;
+import com.example.demo.model.Score;
+import com.example.demo.model.TeamScore;
+import com.example.demo.utils.ScoreUtils;
+
 public class ScoreUtilTests {
 
 	@Test

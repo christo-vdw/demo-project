@@ -1,6 +1,8 @@
-package com.example.demo;
+package com.example.demo.utils;
 
 import java.util.Comparator;
+
+import com.example.demo.model.TeamScore;
 
 //TODO CVDW - Test
 class TeamScoreComparator implements Comparator<TeamScore> {

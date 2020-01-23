@@ -1,10 +1,14 @@
-package com.example.demo;
+package com.example.demo.utils;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import com.example.demo.model.MatchResult;
+import com.example.demo.model.Score;
+import com.example.demo.model.TeamScore;
 
 public class ScoreUtils {
 

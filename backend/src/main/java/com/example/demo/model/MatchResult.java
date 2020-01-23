@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "match_results")
-//TODO CVDW - Rename to match_result
 public class MatchResult {
 	private long id;
 	

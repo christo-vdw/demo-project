@@ -120,6 +120,7 @@
 					<mainClass>com.example.demo.DemoApplication</mainClass>
 				</configuration>
 
+
 				<executions>
 					<execution>
 						<goals>

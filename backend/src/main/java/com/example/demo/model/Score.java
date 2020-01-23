@@ -1,8 +1,8 @@
-package com.example.demo;
+package com.example.demo.model;
 /*
- * Pairing of a points and goal difference
+ * Pairing of points and goal difference
  */
-class Score {
+public class Score {
 
 	private Integer points = 0;
 	private Integer goalDifference = 0;

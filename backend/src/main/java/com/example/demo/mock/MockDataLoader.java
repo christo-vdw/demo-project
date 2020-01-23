@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.mock;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,6 +15,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
 
+import com.example.demo.model.MatchResult;
+import com.example.demo.storage.MatchResultRepository;
 import com.opencsv.CSVReader;
 
 @Component
