@@ -8,7 +8,7 @@ On startup the backend parses a CSV located in the resources into an in memory D
 
 The backend exposes functionality to the client via a Rest API. 
 
-The client can perform CRUD operations on the dataset or access a derived aggregation that gets calculated upon request.
+Via the API, the client can perform CRUD operations on the dataset or access a derived aggregation that gets calculated upon request.
 
 ## Technologies
 
